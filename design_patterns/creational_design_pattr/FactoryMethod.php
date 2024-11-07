@@ -50,19 +50,29 @@ function displayFruit($name) {
             // Create and return a Banana object.
             return new Banana($upper_case);
         default:
-            throw new Exception('Error: Fruit type not recognized');
+            throw new Exception('Error: Fruit type not recognized <br>');
     }
 }
 
 try {
-    // Create an Apple object using the factory.
-    $apple = displayFruit('Apple');
-    echo $apple->displayFruit();
-    echo '<br>';
+    try {
+        // Create an Apple object using the factory.
+        $apple = displayFruit('Aple');
+        echo $apple->displayFruit();
+        echo '<br>';
+    }
+    catch (Exception $e) {
+        echo $e->getMessage();
+    }
 
-    // Create a Banana object using the factory.
-    $banana = displayFruit('banana');
-    echo $banana->displayFruit();
+    try {
+        // Create a Banana object using the factory.
+        $banana = displayFruit('banana');
+        echo $banana->displayFruit();
+    }
+    catch (Exception $e) {
+        echo $e->getMessage();
+    }
 }
 catch (Exception $e) {
     echo $e->getMessage();

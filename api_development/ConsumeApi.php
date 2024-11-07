@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 try {
     // Creating a new instance for guzzle client.
     $client = new Client();
-    $url = 'http://localhost/chorus_php_oops/api_development/BuildApiEndPoint.php';
+    $url = "http://localhost/chorus_php_advanced/api_development/BuildApiEndPoint.php";
     
     // Sending request with URN and type.
     $response = $client->request('GET', $url);
