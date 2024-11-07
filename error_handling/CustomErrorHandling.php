@@ -23,6 +23,19 @@ function divide($a, $b) {
     return $a / $b;
 }
 
+// Creating class 'MyClass'.
+class MyClass {
+    public $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+}
+
+// Createing object.
+$object = new MyClass('Rajesh');
+echo checkObjectProperty($object, 'name');
+
 // Example 2: Custom error for undefined object property.
 function checkObjectProperty($obj, $property) {
     if (!property_exists($obj, $property)) {
