@@ -55,24 +55,19 @@ function displayFruit($name) {
 }
 
 try {
-    try {
-        // Create an Apple object using the factory.
-        $apple = displayFruit('Aple');
-        echo $apple->displayFruit();
-        echo '<br>';
-    }
-    catch (Exception $e) {
-        echo $e->getMessage();
-    }
+    // Create an Apple object using the factory.
+    $apple = displayFruit('Aple');
+    echo $apple->displayFruit();
+    echo '<br>';
+}
+catch (Exception $e) {
+    echo $e->getMessage();
+}
 
-    try {
-        // Create a Banana object using the factory.
-        $banana = displayFruit('banana');
-        echo $banana->displayFruit();
-    }
-    catch (Exception $e) {
-        echo $e->getMessage();
-    }
+try {
+    // Create a Banana object using the factory.
+    $banana = displayFruit('banana');
+    echo $banana->displayFruit();
 }
 catch (Exception $e) {
     echo $e->getMessage();

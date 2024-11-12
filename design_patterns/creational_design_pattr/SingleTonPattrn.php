@@ -51,6 +51,9 @@ function createInstance() {
         // Get the singleton instance of the Database.
         $db1 = DataBase::getInstance();
 
+        // Attempting to clone will throw a fatal error.
+        // $clone_db1 = clone $db1;
+
         // Get the PDO connection.
         $conn = $db1->getConnection();
 
